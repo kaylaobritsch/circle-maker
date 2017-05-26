@@ -1,12 +1,12 @@
-var $ball = $('.ball');
+var $body = $('body');
 
-$('#btn-spawn').on('keydown', function () {
+$('html').on('keydown', function () {
   var $newBall = $('<div>');
-  var randLeft = Math.random();
-  var randTop = Math.random();
+  var randLeft = Math.random() * 500;
+  var randTop = Math.random() * 500;
 
+  $newBall.css('left', randLeft);
+  $newBall.css('top', randTop);
   $newBall.addClass('ball');
   $('body').append($newBall);
-  $('.ball').css('left', randLeft);
-  $('.ball').css('top', randTop);
 })
