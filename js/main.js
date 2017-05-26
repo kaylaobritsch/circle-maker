@@ -2,8 +2,8 @@ var $body = $('body');
 
 $('html').on('keydown', function () {
   var $newBall = $('<div>');
-  var randLeft = Math.random() * 500;
-  var randTop = Math.random() * 500;
+  var randLeft = Math.random() * document.documentElement.clientWidth;
+  var randTop = Math.random() * document.documentElement.clientHeight;
   var randColorList = ['royalblue', 'mistyrose', 'linen', 'lightcoral', 'palegreen'];
 
   $newBall.css('left', randLeft);
